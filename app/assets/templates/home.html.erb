@@ -1,6 +1,192 @@
-<div class="container">
-    <h1>The Home View!</h1>
-    <ul>
-        <li ng-repeat="thing in things">{{thing}}</li>
-    </ul>
+<div class="subway-map" data-columns="108" data-rows="50" data-cellSize="15" data-legendId="legend" data-textClass="text" data-gridNumbers="false" data-grid="false" data-lineWidth="8">
+  <ul data-color="#767575" data-label="Penn Station">    
+      <li data-coords="2,18">Penn Station</li> 
+      <li data-coords="4,18">Wooside</li> 
+      <li data-coords="8,18">Forest Hills</li> 
+      <li data-coords="10,18">Kew Gardens</li>
+      <li data-coords="12,20" data-market="@station"></li>
+  </ul>
+  <ul data-color="#767575" data-label="Flatbush Ave">    
+      <li data-coords="4,24">Flatbush Ave</li> 
+      <li data-coords="6,24">Nostrand Ave</li> 
+      <li data-coords="8,24">East New York</li>
+      <li data-coords="12,23" data-dir="S" data-marker="interchange" data-markerInfo="v5">
+        Jamacia
+      </li>
+  </ul>
+  <ul data-color="#767575" data-label="Long Island City">    
+      <li data-coords="2,22">Long Island City</li> 
+      <li data-coords="4,20">Hunterspoint Ave</li>  
+      <li data-coords="12,20" data-market="@station"></li>
+  </ul>
+  <ul data-color="#767575" data-label="Long Island City 2">    
+      <li data-coords="2,22">Long Island City</li> 
+      <li data-coords="8,22"></li>  
+      <li data-coords="12,21" data-market="@station"></li>
+  </ul>
+  <ul data-color="#ff0033" data-label="Port Washington">    
+      <li data-coords="4,18">Wooside</li>
+      <li data-coords="6,16">Shea Stadium</li>
+      <li data-coords="8,15.5">Flushing Main St</li>
+      <li data-coords="10,15">Murrary Hill</li>
+      <li data-coords="12,14.5">Broadway</li>
+      <li data-coords="14,14">Auburndale</li>
+      <li data-coords="16,13.5">Bayside</li>
+      <li data-coords="18,13">Douglaston</li>
+      <li data-coords="20,12.5">Little Neck</li>
+      <li data-coords="22,12">Great Neck</li>
+      <li data-coords="24,11.5">Manhasset</li>
+      <li data-coords="26,11">Plandome</li>
+      <li data-coords="28,10.5">Port Washington</li>
+  </ul>
+  <ul data-color="#ffcc66" data-label="Hempstead">    
+      <li data-coords="12,20" data-market="@station"></li>
+      <li data-coords="26,20">Holis</li>
+      <li data-coords="28,20">Queens Village</li>
+      <li data-coords="32,21">Bellerose</li>
+      <li data-coords="34,21" data-dir="S" data-marker="interchange" data-markerInfo="v2">
+        Floral Park
+      </li>
+      <li data-coords="36,22">Stewart Manor</li>
+      <li data-coords="38,22">Nassau Blvd</li>
+      <li data-coords="40,22">Garden City</li>
+      <li data-coords="42,22">Country Life Press</li>
+      <li data-coords="44,22">Hempstead</li>
+  </ul>
+  <ul data-color="#ff9933" data-label="Long Beach">
+      <li data-coords="35,32"></li><!-- Valley Stream -->
+      <li data-coords="42,32" data-dir="S" data-marker="interchange" data-markerInfo="v4">
+        Lynbrook
+      </li> 
+      <li data-coords="44,33">Centre Ave</li>
+      <li data-coords="44,35">East Rockaway</li>
+      <li data-coords="44,37">Oceanside</li>
+      <li data-coords="44,39">Island Park</li>
+      <li data-coords="44,41">Long Beach</li>
+  </ul>
+  <ul data-color="#996666" data-label="Far Rockaway">    
+      <li data-coords="12,23"></li> <!-- Jamacia -->
+      <li data-coords="16,23"></li>
+      <li data-coords="24,26">Locust Manor</li>
+      <li data-coords="31,32">Laurelton</li>
+      <li data-coords="33,32">Laurelton</li>
+      <li data-coords="35,32">Valley Stream</li>
+      <li data-coords="36,33">Gibson</li>
+      <li data-coords="36,35">Hewlett</li>
+      <li data-coords="36,37">Woodmere</li>
+      <li data-coords="36,39">Cedarhurst</li>
+      <li data-coords="36,41">Lawrence</li>
+      <li data-coords="36,43">Inwood</li>
+      <li data-coords="36,45">Far Rockaway</li>
+  </ul>
+  <ul data-color="#008966" data-label="Babylon">    
+      <li data-coords="35,30"></li>
+      <li data-coords="42,30"></li><!-- Lynbrook -->
+      <li data-coords="50,30">Rockville Centre</li> 
+      <li data-coords="52,30">Baldwin</li>  
+      <li data-coords="54,30">Freeport</li>  
+      <li data-coords="56,30">Merrick</li>  
+      <li data-coords="58,30">Bellmore</li>  
+      <li data-coords="60,30">Wantagh</li>  
+      <li data-coords="62,30">Seaford</li>  
+      <li data-coords="64,30">Massapequa</li>  
+      <li data-coords="66,30">Massapequa Park</li>  
+      <li data-coords="68,30">Amityville</li>  
+      <li data-coords="70,30">Copiague</li>  
+      <li data-coords="72,30">Lindenhurst</li>  
+      <li data-coords="74,30">Babylon</li>  
+  </ul>
+  <ul data-color="#3399cc" data-label="West Hempstead">    
+      <li data-coords="12,21"></li>
+      <li data-coords="20,21"></li>
+      <li data-coords="26,25">St.Albans</li>
+      <li data-coords="32,30"></li>
+      <li data-coords="35,30"></li>
+      <li data-coords="37,29">Westwood</li>
+      <li data-coords="40,28">Malverne</li>
+      <li data-coords="42,28">Lakeview</li>
+      <li data-coords="44,28">Hempstead Gardens</li>
+      <li data-coords="46,28">West Hempstead</li>
+  </ul>
+  <ul data-color="#203737" data-label="Connector">    
+      <li data-coords="58,20">Bethpage</li> 
+      <li data-coords="74,30">Babylon</li>  
+  </ul>
+  <ul data-color="#009999" data-label="Montauk">    
+      <li data-coords="74,30">Babylon</li>  
+      <li data-coords="76,30">Bay Shore</li> 
+      <li data-coords="78,30">Islip</li>
+      <li data-coords="80,30">Great River</li>
+      <li data-coords="82,30">Oakdale</li>
+      <li data-coords="84,30">Sayville</li>
+      <li data-coords="86,30">Patchogue</li>
+      <li data-coords="88,30">Bellport</li>
+      <li data-coords="90,30">Mastic-Shirley</li>
+      <li data-coords="92,30">Speonk</li>
+      <li data-coords="94,30">Westhampton</li>
+      <li data-coords="96,30">Hampton Bays</li>
+      <li data-coords="98,30">Southhampton</li>
+      <li data-coords="100,30">Bridgehampton</li>
+      <li data-coords="102,30">East Hampton</li>
+      <li data-coords="104,30">Amagansett</li>
+      <li data-coords="106,30">Montauk</li>
+  </ul>
+  <ul data-color="#993399" data-label="Greenport">
+      <li data-coords="54,20">Hicksville</li>         
+      <li data-coords="58,20">Bethpage</li>
+      <li data-coords="64,20">Farmingdale</li>
+      <li data-coords="66,20">Pinelawn</li>
+      <li data-coords="68,20">Wyandanch</li>
+      <li data-coords="70,20">Deer Park</li>
+      <li data-coords="72,20">Brentwood</li>
+      <li data-coords="74,20">Central Islip</li>
+      <li data-coords="76,20">Ronkonkoma</li> 
+      <li data-coords="78,20">Medford</li>
+      <li data-coords="80,20">Yaphank</li>
+      <li data-coords="82,20">Riverhead</li>
+      <li data-coords="84,20">Mattituck</li>
+      <li data-coords="86,20">Southold</li>
+      <li data-coords="88,20">Greenport</li>
+  </ul>
+  <ul data-color="#0066cc" data-label="Port Jefferson" >
+      <li data-coords="28,20">Queens Village</li>
+      <li data-coords="34,20"></li>  
+      <li data-coords="36,20">New Hyde Park</li>  
+      <li data-coords="38,20">Merillon Ave</li>  
+      <li data-coords="40,20">Mineola</li>  
+      <li data-coords="46,20">Carle Place</li>  
+      <li data-coords="50,20">Westbury</li>       
+      <li data-coords="54,20">Hicksville</li>
+      <li data-coords="59,18" data-labelpos="N">Syosset</li>
+      <li data-coords="61,18" data-labelpos="N">Cold Spring Harbor</li>
+      <li data-coords="63,18" data-labelpos="N">Huntington</li>
+      <li data-coords="65,18" data-labelpos="N">Greenlawn</li>
+      <li data-coords="67,18" data-labelpos="N">Northport</li>
+      <li data-coords="69,18" data-labelpos="N">Kings Park</li>
+      <li data-coords="71,18" data-labelpos="N">Smithtown</li>
+      <li data-coords="73,18" data-labelpos="N">St. James</li>
+      <li data-coords="75,18" data-labelpos="N">Stony Brook</li> 
+      <li data-coords="77,18" data-labelpos="N">Port Jefferson</li>
+  </ul>
+  <ul data-color="#009966" data-label="Oyster Bay">
+      <li data-coords="40,20">Mineola</li>
+      <li data-coords="41,19">East Williston</li>
+      <li data-coords="41,17">Albertson</li>
+      <li data-coords="41,15">Rosyln</li>
+      <li data-coords="41,13">Greenvale</li>
+      <li data-coords="41,10">Glen Head</li>
+      <li data-coords="41,8">Sea Cliff</li>
+      <li data-coords="41,6">Glen St</li>
+      <li data-coords="43,5">Glen Cove</li>
+      <li data-coords="45,5">Locust Valley</li>
+      <li data-coords="47,5">Oyster Bay</li>
+  </ul>
 </div>
+
+    <script type="text/javascript">
+        $(".subway-map").subwayMap({ debug: true });
+
+        $(".clickable").click(function() {
+          console.log("Fuck ya!");
+        })
+    </script>

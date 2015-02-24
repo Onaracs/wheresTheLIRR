@@ -1,0 +1,52 @@
+body {
+  font-family: Verdana;
+  font-size: 8pt;
+  background-color: #fefbf7;
+  overflow-y: hidden;
+  margin: 0;
+}
+
+/* The main DIV for the map */
+.subway-map
+{
+  margin: 0;
+  width: 500px;
+  height:410px;
+  background-color: #fefbf7;
+}
+
+/* Text labels */
+.text
+{
+  text-decoration: none;
+  color: black;
+  /* Safari */
+  -webkit-transform: rotate(-50deg);
+  /* Firefox */
+  -moz-transform: rotate(-50deg);
+  /* IE */
+  -ms-transform: rotate(-50deg);
+  /* Opera */
+  -o-transform: rotate(-50deg);
+}
+
+#legend
+{
+  float: left;
+  width: 250px;
+  height:400px;
+}
+
+#legend div
+{
+  height: 25px;
+}
+
+#legend span
+{
+  margin: 5px 5px 5px 0;
+}
+.subway-map span
+{
+  margin: 5px 5px 5px 0;
+}

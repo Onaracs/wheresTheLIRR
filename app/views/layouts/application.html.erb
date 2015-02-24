@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WheresTheLIRR</title>
+  <title>Where's the LIRR?</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="myApp">
 
 <%= yield %>
 
+
+<script type="text/javascript">
+    $(".subway-map").subwayMap({ debug: true });
+</script>
 </body>
 </html>
