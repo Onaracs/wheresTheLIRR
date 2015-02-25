@@ -1,6 +1,6 @@
 <div class="subway-map" data-columns="108" data-rows="50" data-cellSize="15" data-legendId="legend" data-textClass="text" data-gridNumbers="false" data-grid="false" data-lineWidth="8">
   <ul data-color="#767575" data-label="Penn Station">    
-      <li data-coords="2,18">Penn Station</li> 
+      <li data-coords="2,18" data-market="station">Penn Station</li> 
       <li data-coords="4,18">Wooside</li> 
       <li data-coords="8,18">Forest Hills</li> 
       <li data-coords="10,18">Kew Gardens</li>
@@ -183,10 +183,11 @@
   </ul>
 </div>
 
-    <script type="text/javascript">
-        $(".subway-map").subwayMap({ debug: true });
 
-        $(".clickable").click(function() {
-          console.log("Fuck ya!");
-        })
-    </script>
+<script type="text/javascript">
+    $(".subway-map").subwayMap({ debug: true });
+
+    $(".clickable").click(function() {
+      console.log("Fuck ya!");
+    })
+</script>

@@ -3,7 +3,8 @@ angular
 	.module('myApp', [
 		'ngAnimate',
 		'ui.router',
-		'templates'
+		'templates',
+		'HomeCtrl'
 	])
 	.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -15,6 +16,12 @@ angular
 				url: '/',
 				templateUrl: 'home.html',
 				controller: 'HomeCtrl'
+			})
+
+			.state('info', {
+				url: '/info',
+				templateUrl: 'info.html',
+				controller: 'InfoCtrl'
 			})
 			// an abstract state that just serves as a
 			// parent for the below child states

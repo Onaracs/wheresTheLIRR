@@ -47,8 +47,8 @@ THE SOFTWARE.
             this._log(s);
     },
     _log: function () {
-        if (window.console && window.console.log)
-            window.console.log('[subwayMap] ' + Array.prototype.join.call(arguments, ' '));
+        // if (window.console && window.console.log)
+        //     window.console.log('[subwayMap] ' + Array.prototype.join.call(arguments, ' '));
     },
     _supportsCanvas: function () {
         var canvas = $("<canvas></canvas>");
@@ -405,7 +405,7 @@ THE SOFTWARE.
         if (data.link != "")
             $("<a " + style + " title='" + data.title.replace(/\\n/g,"<br />") + "' href='" + data.link + "' target='_new'>" + data.label.replace(/\\n/g,"<br />") + "</span>").appendTo(el);
         else
-            $("<span " + style + ">" + data.label.replace(/\\n/g,"<br />") + "</span>").appendTo(el);;
+            $("<span ng-click='showInfo()'" + style + ">" + data.label.replace(/\\n/g,"<br />") + "</span>").appendTo(el);;
         
     },
     _drawGrid: function (el, scale, gridNumbers) {
