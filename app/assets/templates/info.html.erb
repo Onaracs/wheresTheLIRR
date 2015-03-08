@@ -1,1 +1,11 @@
-The info page!
+<h1>Town Name</h1>
+
+<ul>
+  <li ng-repeat="comment in comments">
+    {{ comment.userName }}
+    {{ comment.comment }}
+    {{ comment.time }}
+  </li>
+</ul>
+
+<commentform></commentform>

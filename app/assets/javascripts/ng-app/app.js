@@ -1,13 +1,19 @@
-
 angular
 	.module('myApp', [
 		'ngAnimate',
 		'ui.router',
 		'templates',
-		'HomeCtrl'
+		'HomeCtrl',
+		'InfoCtrl',
+		'ngAppDirectives'
 	])
-	.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+	.config(function(
+		$stateProvider, 
+		$urlRouterProvider, 
+		$locationProvider) {
 
+		// default fallback route
+		$urlRouterProvider.otherwise('/');
 		/**
 		 * Route and States
 		 */
@@ -46,8 +52,6 @@ angular
 					templateUrl: 'dashboard/three.html'
 				});
 
-		// default fallback route
-		$urlRouterProvider.otherwise('/');
 
 		// enable HTML5 mode for SEO
 		$locationProvider.html5Mode(true);
