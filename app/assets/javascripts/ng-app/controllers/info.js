@@ -4,20 +4,25 @@ angular.module('InfoCtrl', [
   ])
 
 .controller('InfoCtrl', function (
-  $scope
+  $scope,
+  $http
 ) {
 
-  $scope.comments = [
-    {'userName': 'Brendan Scarano',
-      'comment': 'Still waiting for this damn train!',
-      'time': '3:07 Mar 5th'},
-    {'userName': 'Foo Bar',
-      'comment': '...waiting for this damn train!',
-      'time': '3:05 Mar 5th'},
-    {'userName': 'Jimmy Schimmy',
-      'comment': 'Lets get busy',
-      'time': '3:01 Mar 5th'}
-  ]
+  $scope.comments = [];
+
+  var promise = $http({
+    url: '/comments',
+    method: 'GET',
+    // headers: {
+    //   "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    // },
+    timeout: 60000,
+  }).success(function(data, status, headers, config) {
+    console.log(data);
+    $scope.comments = data
+  }).error(function(response) {
+    console.log(response);
+  })
 
   $scope.addComment = function() {
     

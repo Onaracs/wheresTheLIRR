@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('HomeCtrl', [])
+angular.module('HomeCtrl', [
+  // 'commentFactory'
+])
 	
 .controller('HomeCtrl', function (
   $scope,
@@ -11,30 +13,10 @@ angular.module('HomeCtrl', [])
     $scope.stationName = 'Please select a station';  
     
     $scope.showInfo = function() {
-      console.log(this);
-      // $state.go('info');
+      $state.go('info');
     }
 
-    // var promise = $http({
-    //   url: 'http://localhost:3000/comments',
-    //   method: 'GET',
-    //   headers: {
-    //     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-    //   },
-    //   timeout: 60000,
-    // }).success(function(data, status, headers, config) {
-    //   console.log(data);
-    //   console.log(status);
-    //   console.log(headers);
-    //   console.log(config);
-    // }).error(function(response) {
-    //   console.log(response);
-    // })
-  $http.get('/comments').success(function(data) {
-    console.log(data);
-  })
-
-    // return promise
+    // commentFactory.getComments();
 });
 
 // $scope.pennStation = [{"dataCoords":"2,18",
