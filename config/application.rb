@@ -21,5 +21,16 @@ module UiRouterTutorial2
     # config.i18n.default_locale = :de
     config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets", "stylesheets")
     config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets","fonts")
+
+    unless Rails.env == 'production'
+        require 'yaml'
+        rails_root = Rails.root || File.dirname(__FILE__) + '/../..'
+        config = YAML.load_file(rails_root.to_s + '/config/env_vars.yml')
+        if config.key?(Rails.env) && config[Rails.env].is_a?(Hash)
+          config[Rails.env].each do |key, value|
+            ENV[key] = value.to_s
+          end
+        end
+    end
   end
 end

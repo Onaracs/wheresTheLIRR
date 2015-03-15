@@ -1,6 +1,6 @@
 <div>
-<form>
-  Add Comment: <input type="text">
+<form ng-submit="addComment()">
+  Add Comment: <input type="text" ng-model="newComment">
   <input type="submit" value="Comment">
 </form>
 </div>

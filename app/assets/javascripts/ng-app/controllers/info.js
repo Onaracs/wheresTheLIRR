@@ -6,7 +6,6 @@ angular.module('InfoCtrl', [
 .controller('InfoCtrl', function (
   $scope
 ) {
-  console.log("In the info controller");
 
   $scope.comments = [
     {'userName': 'Brendan Scarano',
@@ -19,5 +18,16 @@ angular.module('InfoCtrl', [
       'comment': 'Lets get busy',
       'time': '3:01 Mar 5th'}
   ]
+
+  $scope.addComment = function() {
+    
+    var newComment = {
+      'userName': 'Test User',
+      'comment': $scope.newComment,
+      'time': 'Now'
+    }
+
+    $scope.comments.push(newComment);
+  }
 
 });

@@ -5,15 +5,36 @@ angular.module('HomeCtrl', [])
 .controller('HomeCtrl', function (
   $scope,
   $state,
+  $http,
   $window
 ) {
-    $scope.stationName = '';  
+    $scope.stationName = 'Please select a station';  
     
     $scope.showInfo = function() {
-      console.log("clicked");
-      console.log($scope);
-      $state.go('info');
+      console.log(this);
+      // $state.go('info');
     }
+
+    // var promise = $http({
+    //   url: 'http://localhost:3000/comments',
+    //   method: 'GET',
+    //   headers: {
+    //     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    //   },
+    //   timeout: 60000,
+    // }).success(function(data, status, headers, config) {
+    //   console.log(data);
+    //   console.log(status);
+    //   console.log(headers);
+    //   console.log(config);
+    // }).error(function(response) {
+    //   console.log(response);
+    // })
+  $http.get('/comments').success(function(data) {
+    console.log(data);
+  })
+
+    // return promise
 });
 
 // $scope.pennStation = [{"dataCoords":"2,18",

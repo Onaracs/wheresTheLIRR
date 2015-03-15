@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  # root to: 'application#index'
+  get 'authentications/index'
 
   root 'application#index'
 
-  
-  get "*path" => "application#index"
+  # get "*path" => "application#index"
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :sessions, only: [:create, :destroy]
+  resources :comments, :defaults => { format: :json }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
