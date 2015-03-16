@@ -12,8 +12,9 @@ angular.module('HomeCtrl', [
 ) {
     $scope.stationName = 'Please select a station';  
     
-    $scope.showInfo = function() {
-      $state.go('info');
+    $scope.showInfo = function(townName) {
+      console.log(townName);
+      // $state.go('info');
     }
 
     // commentFactory.getComments();

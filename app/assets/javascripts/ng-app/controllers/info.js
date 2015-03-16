@@ -25,14 +25,23 @@ angular.module('InfoCtrl', [
   })
 
   $scope.addComment = function() {
-    
-    var newComment = {
-      'userName': 'Test User',
-      'comment': $scope.newComment,
-      'time': 'Now'
-    }
+    $http({
+      url: '/comments',
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      }
+    }).success(function(data) {
+      console.log(data);
+    })
 
-    $scope.comments.push(newComment);
+    // var newComment = {
+    //   'userName': 'Test User',
+    //   'comment': $scope.newComment,
+    //   'time': 'Now'
+    // }
+
+    // $scope.comments.push(newComment);
   }
 
 });

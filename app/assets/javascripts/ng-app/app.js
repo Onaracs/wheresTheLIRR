@@ -13,8 +13,8 @@ angular
 		$locationProvider,
 		$httpProvider) {
 
-		// authToken = $("meta[name=\"csrf-token\"]").attr("content")
-		// $httpProvider.defaults.headers.common["X-CSREF-TOKEN"] = authToken;
+		authToken = $("meta[name=\"csrf-token\"]").attr("content")
+		$httpProvider.defaults.headers.common["X-CSREF-TOKEN"] = authToken;
 
 		// default fallback route
 		$urlRouterProvider.otherwise('/');
