@@ -29,7 +29,7 @@ angular
 			})
 
 			.state('info', {
-				url: '/info',
+				url: '/info/:town',
 				templateUrl: 'info.html',
 				controller: 'InfoCtrl'
 			})

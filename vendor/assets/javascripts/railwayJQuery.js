@@ -304,8 +304,6 @@ THE SOFTWARE.
 
     },
     _drawMarker: function (el, ctx, scale, color, textClass, width, data, reverseMarkers) {
-        console.log(data);
-
         if (data.label == "") return;
         if (data.marker == "") data.marker = "station";
 

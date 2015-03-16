@@ -14,7 +14,9 @@ angular.module('HomeCtrl', [
     
     $scope.showInfo = function(townName) {
       console.log(townName);
-      // $state.go('info');
+      $state.go('info', {
+        town: townName
+      });
     }
 
     // commentFactory.getComments();

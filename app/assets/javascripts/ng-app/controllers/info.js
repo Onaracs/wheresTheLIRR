@@ -5,9 +5,10 @@ angular.module('InfoCtrl', [
 
 .controller('InfoCtrl', function (
   $scope,
-  $http
+  $http,
+  $stateParams
 ) {
-
+  $scope.townName = $stateParams.town;
   $scope.comments = [];
 
   var promise = $http({
@@ -34,14 +35,6 @@ angular.module('InfoCtrl', [
     }).success(function(data) {
       console.log(data);
     })
-
-    // var newComment = {
-    //   'userName': 'Test User',
-    //   'comment': $scope.newComment,
-    //   'time': 'Now'
-    // }
-
-    // $scope.comments.push(newComment);
   }
 
 });
