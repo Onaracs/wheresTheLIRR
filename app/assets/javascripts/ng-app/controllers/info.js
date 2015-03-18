@@ -19,20 +19,34 @@ angular.module('InfoCtrl', [
     // },
     timeout: 60000,
   }).success(function(data, status, headers, config) {
-    console.log(data);
     $scope.comments = data
   }).error(function(response) {
     console.log(response);
   })
 
   $scope.addComment = function() {
+    // $http.post('/comments', {data: 'hello world!'}).
+    //   success(function(data) {
+    //     console.log(data);
+    //   }).
+    //   error(function(data) {
+    //     console.log(data);
+    //   });
     $http({
       url: '/comments',
       method: 'POST',
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      data: {
+        text: $scope.newComment
       }
     }).success(function(data) {
+      var newComment = {
+        created_at: data.created_at,
+        text: data.text,
+        username: data.username
+      }
+      $scope.comments.push(newComment);
+      console.log(data);
+    }).error(function(data) {
       console.log(data);
     })
   }

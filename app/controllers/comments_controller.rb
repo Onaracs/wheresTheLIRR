@@ -10,6 +10,12 @@ class CommentsController < ApplicationController
     p "-----------------"
     p params
     p "-----------------"
+    @comment = Comment.new(username: 'Brendan', 
+                            text: params[:text])
+
+    if @comment.save!
+      respond_with(@comment)
+    end
   end
 
 end
