@@ -1,5 +1,19 @@
 <h1>{{townName}}</h1>
 
+<div class="train-times-container">
+  <select ng-init="departure = departure || towns[0]" 
+          ng-model="departure" 
+          ng-options="town as town for town in towns">
+  </select>
+  {{departure}}
+  <select ng-init="destination = destination || towns[0]" 
+          ng-model="destination" 
+          ng-options="town as town for town in towns">
+  </select>
+  {{destination}}
+
+</div>
+
 <ul>
   <li ng-repeat="comment in comments">
     {{ comment.username }}

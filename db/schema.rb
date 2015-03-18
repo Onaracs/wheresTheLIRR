@@ -16,20 +16,10 @@ ActiveRecord::Schema.define(version: 20150316234329) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "authentications", force: true do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "oauth_token"
-    t.datetime "oauth_expires_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "comments", force: true do |t|
     t.string   "username"
     t.string   "text"
+    t.integer  "town_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,6 +33,17 @@ ActiveRecord::Schema.define(version: 20150316234329) do
   create_table "towns", force: true do |t|
     t.string   "name"
     t.integer  "line_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
