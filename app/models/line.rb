@@ -1,5 +1,6 @@
 class Line < ActiveRecord::Base
 
-  has_many :towns
+  has_many :hubs
+  has_many :towns, :through => :hubs
 
 end

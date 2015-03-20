@@ -1,7 +1,7 @@
 class Town < ActiveRecord::Base
 
-  belongs_to :line
-
+  has_many :hubs
+  has_many :lines, :through => :hubs
   has_many :comments
 
 end
