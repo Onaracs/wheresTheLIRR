@@ -6,23 +6,22 @@ class CommentsController < ApplicationController
     respond_with Comment.all
   end
 
+  def show
+    town = Town.find_by_name(params[:id])
+    comments = Comment.where(town_id: town.id)
+
+    respond_with comments
+  end
+
   def create
-    p "-----------------"
-    p params
-    p "-----------------"
-    @comment = Comment.new(username: 'Brendan', 
-                            text: params[:text])
+    town = Town.find_by_name(params[:town])
+    comment = Comment.new(username: 'Test User', 
+                            text: params[:text],
+                            town_id: town.id)
 
-    if @comment.save!
-      respond_with(@comment)
+    if comment.save!
+      respond_with(comment)
     end
-    # if new_comment.valid?
-    #   new_comment.save!
-    # end
-
-    # respond_with(new_comment) do |format|
-    #   format.json { render :json => new_comment.as_json }
-    # end
   end
 
 end

@@ -5,13 +5,11 @@
           ng-model="departure" 
           ng-options="town as town for town in towns">
   </select>
-  {{departure}}
+  <br>
   <select ng-init="destination = destination || towns[0]" 
           ng-model="destination" 
           ng-options="town as town for town in towns">
   </select>
-  {{destination}}
-
 </div>
 
 <ul>
