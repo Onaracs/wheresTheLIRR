@@ -16,7 +16,7 @@
   <li ng-repeat="comment in comments">
     {{ comment.username }}
     {{ comment.text }}
-    {{ comment.created_at }}
+    {{ comment.created_at | date:'hh:mm a MMM dd' }}
   </li>
 </ul>
 
