@@ -7,8 +7,14 @@ class CommentsController < ApplicationController
   end
 
   def show
-    town = Town.find_by_name(params[:id])
+    p "========================="
+    p params
+
+    town = Town.find(params[:id])
     comments = Comment.where(town_id: town.id)
+    p comments
+    p town
+    p "========================="
 
     respond_with comments
   end

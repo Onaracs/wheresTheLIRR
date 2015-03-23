@@ -3,18 +3,18 @@
 <div class="train-times-container">
   <select ng-init="departure = departure || towns[0]" 
           ng-model="departure" 
-          ng-options="town as town for town in towns">
+          ng-options="town.name as town.name for town in towns">
   </select>
   <br>
   <select ng-init="destination = destination || towns[0]" 
           ng-model="destination" 
-          ng-options="town as town for town in towns">
+          ng-options="town.name as town.name for town in towns">
   </select>
 </div>
 
-<calendar></calendar>
-
 <button ng-click="reverse()">Switch</button>
+
+<calendar></calendar>
 
 <div class="comments-wrapper">
   <commentform></commentform>

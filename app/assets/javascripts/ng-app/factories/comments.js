@@ -2,9 +2,8 @@ angular.module('commentsModule', [])
 
 .factory('getTownComments', function($http) {
 
-  return function() {
-    // NEED TO GET ONLY THE RIGHT COMMENTS!!!
-    var url = '/comments';
+  return function(townID) {
+    var url = '/comments/' + townID;
     var promise = $http({
       url: url,
       method: 'GET',
@@ -13,7 +12,7 @@ angular.module('commentsModule', [])
       // },
       timeout: 60000,
       }).success(function(response) {
-        return response
+        return response;
       }).error(function(response) {
         return {'status': false};
       })
