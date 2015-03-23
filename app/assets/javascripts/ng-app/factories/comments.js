@@ -13,7 +13,6 @@ angular.module('commentsModule', [])
       // },
       timeout: 60000,
       }).success(function(response) {
-        console.log(response);
         return response
       }).error(function(response) {
         return {'status': false};

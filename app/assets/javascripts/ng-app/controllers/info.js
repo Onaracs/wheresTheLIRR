@@ -16,13 +16,16 @@ angular.module('InfoCtrl', [
   $scope.departure = $stateParams.town;
   $scope.destination = '';
     
-  console.log(getTowns);
   $scope.towns = getTowns;
 
 
   getTownComments().then(function(result) {
     $scope.comments = result.data;
   });
+
+  $scope.reverse = function() {
+    $scope.departure = [$scope.destination, $scope.destination = $scope.departure][0];
+  }
 
   $scope.addComment = function() {
     $http({

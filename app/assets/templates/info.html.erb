@@ -12,12 +12,18 @@
   </select>
 </div>
 
-<ul>
-  <li ng-repeat="comment in comments">
-    {{ comment.username }}
-    {{ comment.text }}
-    {{ comment.created_at | date:'hh:mm a MMM dd' }}
-  </li>
-</ul>
+<calendar></calendar>
 
-<commentform></commentform>
+<button ng-click="reverse()">Switch</button>
+
+<div class="comments-wrapper">
+  <commentform></commentform>
+
+  <ul>
+    <li ng-repeat="comment in comments">
+      {{ comment.username }}
+      {{ comment.text }}
+      {{ comment.created_at | date:'hh:mm a MMM dd' }}
+    </li>
+  </ul>
+</div>
