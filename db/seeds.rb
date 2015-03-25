@@ -178,7 +178,7 @@ lines.each do |line|
   Line.create(name: line)
 end
 
-
+towns.sort!{|a, b| a[:town] <=> b[:town]}
 towns.each do |town_iteration|
   # print town_iteration
   town = Town.new(name: town_iteration[:town])

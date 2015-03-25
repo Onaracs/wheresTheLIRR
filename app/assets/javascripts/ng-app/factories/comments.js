@@ -3,6 +3,7 @@ angular.module('commentsModule', [])
 .factory('getTownComments', function($http) {
 
   return function(townID) {
+    console.log(townID);
     var url = '/comments/' + townID;
     var promise = $http({
       url: url,

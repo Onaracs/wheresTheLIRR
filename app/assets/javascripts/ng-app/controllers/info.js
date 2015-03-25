@@ -15,16 +15,25 @@ angular.module('InfoCtrl', [
   $scope.townName = $stateParams.town;
   $scope.departure = $stateParams.town;
   $scope.destination = '';
+  $scope.month = 'March';
   
-  getTowns().then(function(result) {
-    $scope.towns = result.data;
-  });
+  // http call
+  // getTowns().then(function(result) {
+  //   $scope.towns = result.data;
+  // });
+  $scope.towns = getTowns;
 
   // underscore, findWhere town = stateParams
   // take the ID of that town
   // pass it into getTownComments
+  // var stop = _.findWhere($scope.towns, {name: $stateParams.town});
+  for (var i = 0; i < $scope.towns.length; i++) {
+    if ($scope.towns[i] === $stateParams.town) {
+      var stopNumber = i + 1;
+    }
+  }
 
-  getTownComments(1).then(function(result) {
+  getTownComments(stopNumber).then(function(result) {
     $scope.comments = result.data || [];
   });
 
